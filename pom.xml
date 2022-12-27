@@ -85,7 +85,8 @@
 		
 		<!-- <provided dependencies> -->
 		
-	<!-- </dependencies> -->
+	</dependencies> 
+	
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
