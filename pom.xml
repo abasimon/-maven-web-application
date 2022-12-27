@@ -83,9 +83,9 @@
 			<version>${spring.version}</version>
 		</dependency>
 		
-		<provided dependencies>
+		<!-- <provided dependencies> -->
 		
-	</dependencies>
+	<!-- </dependencies> -->
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
