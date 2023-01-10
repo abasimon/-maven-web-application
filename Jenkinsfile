@@ -1,13 +1,13 @@
 pipeline{
   agent any 
   tools {
-    maven "maven3.8.6"
+    maven "maven 3.8.6"
   }  
   stages {
     stage('1GetCode'){
       steps{
         sh "echo 'cloning the latest application version' "
-        git branch: 'feature', credentialsId: 'gitHubCredentials', url: 'https://github.com/LandmakTechnology/maven-web-application'
+        git branch: 'feature', credentialsId: 'gitHubCredentials', url: 'https://github.com/abasimon/-maven-web-application.git
       }
     }
     stage('3Test+Build'){
@@ -28,10 +28,9 @@ pipeline{
         sh "mvn deploy"
       }
     } 
-    /*
     stage('8deploy2prod'){
       steps{
-        deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', path: '', url: 'http://http://52.90.89.232:8177/:8080/')], contextPath: null, war: 'target/*war'
+        deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', path: '', url: 'http://52.90.89.232:8080/')], contextPath: null, war: 'target/*war'
       }
     }
 }
@@ -61,6 +60,6 @@ Landmark
 +1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'paypal-team@gmail.com'
     }
   } 
-  */
+ 
 }
 }
